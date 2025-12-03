@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Immersive Shopping</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Babel Standalone for in-browser JSX/TSX transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="importmap">
 {
   "imports": {
@@ -41,6 +43,7 @@ body {
 </head>
   <body class="bg-white text-zinc-800">
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <!-- Change script type to text/babel for Babel to transpile it -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
   </body>
 </html>
